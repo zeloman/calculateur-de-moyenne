@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url(IDA.jpg);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.container {
+    background-color: transparent;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    max-width: 900px; /* élargi : le tableau a maintenant 6 colonnes */
+    width: 100%;
+    backdrop-filter: blur(10px);
+}
+
+h1 { text-align: center; color: #2c3e50; }
+
+.etape {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.erreur {
+    color: #c0392b;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.95rem; /* corrigé : "text-size" n'existe pas en CSS */
+    font-weight: bold;
+}
+
+input {
+    width: 60px;
+    padding: 5px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+input.invalide {
+    border-color: #e24b4a;
+    outline: 2px solid #e24b4a;
+}
+
+.cellule-notes input {
+    margin: 2px;
+}
+
+button {
+    padding: 12px 20px;
+    background-color: #3498db;
+    color: white;
+    border: 2px solid transparent;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover { background-color: #2980b9; }
+
+button.secondaire { background-color: #7f8c8d; }
+
+#btnCalculer { width: 100%; }
+
+.result-box { margin: 20px 0; text-align: center; }
+
+.resultat-succes,
+.resultat-echec {
+    padding: 15px;
+    border-radius: 12px;
+    font-weight: bold;
+}
+
+.resultat-succes { background: rgba(39, 174, 96, 0.35); color: #145a32; }
+.resultat-echec  { background: rgba(231, 76, 60, 0.35); color: #7b241c; }
+
+@media (max-width: 600px) {
+    .container { padding: 12px; overflow-x: auto; }
+}

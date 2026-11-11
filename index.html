@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Calculateur de Moyenne - IDA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ <body>
+  <div class="container">
+    <h1><u>Calculateur de Moyenne Filière-IDA</u></h1>
+
+    <div class="etape">
+      <label for="nbMatieres">Combien de matières ? (1 à 20)</label>
+      <input type="number" id="nbMatieres" min="1" max="20">
+      <button type="button" id="btnGenerer">Valider</button>
+      <button type="button" id="btnIDA" class="secondaire">Charger les matières IDA</button>
+    </div>
+ <div id="erreur" class="erreur"></div>
+ <div id="zoneTableau" hidden>
+    <table>
+        <thead>
+            <tr>
+                <th>N</th><th>Matiere </th><th>coeff</th>
+                <th>Nb notes</th><th>Notes/20</th><th>Moyenne</th>
+            </tr>
+        </thead>
+        <tbody id="corps"></tbody>
+    </table>
+    <button type="button" id="btnCalculer"> calcuer ma moyenne</button>
+ </div>
+ <div id="resultat" class="result-box"></div>
+    <b>by Zeloman</b>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
